@@ -28,6 +28,7 @@ const plugins = [
           targets: '> 2.5%, not dead',
         },
       ],
+      '@babel/preset-typescript',
     ],
     plugins: [
       [
@@ -36,6 +37,7 @@ const plugins = [
           legacy: true,
         },
       ],
+      ["@babel/plugin-transform-class-properties"]
       ['@babel/plugin-proposal-class-properties'],
       ['@babel/plugin-transform-template-literals'],
     ],
