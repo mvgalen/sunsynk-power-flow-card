@@ -13,7 +13,6 @@ const plugins = [
     include: ['src/**/*.ts'], // 👈 FORCE the plugin to grab TypeScript files
     check: false,             // Prevents cache/type check lockups in CI pipelines
     clean: true,
-  }),    
     }),
   nodeResolve({
     jsnext: true,
