@@ -8,21 +8,20 @@ import json from '@rollup/plugin-json';
 const isWatch = process.env.ROLLUP_WATCH === 'true';
 
 const plugins = [
+  typescript({
+      tsconfig: './tsconfig.json'
+    }),
   nodeResolve({
     jsnext: true,
     main: true,
   }),
   commonjs(),
-  typescript({
-      tsconfig: './tsconfig.json',
-      clean: true
-    }),
   json(),
   babel({
     exclude: 'node_modules/**',
     babelHelpers: 'bundled',
     compact: true,
-    extensions: ['.js'],
+    extensions: ['.js', 'ts'],
     presets: [
       [
         '@babel/env',
