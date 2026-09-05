@@ -38,20 +38,17 @@ jobs:
         run: npm install semver --force
 
       - name: Remove package-lock.json to prevent conflicts
-        if: env.is_higher_version == 'true'
         run: |
           if [ -f package-lock.json ]; then
             rm package-lock.json
           fi
 
       - name: Build project
-        if: env.is_higher_version == 'true'
         run: |
           npm install --legacy-peer-deps
           npm run build
 
       - name: 🛎️ Create release
-        if: env.is_higher_version == 'true'
         uses: softprops/action-gh-release@v2
         with:
           files: dist/sunsynk-power-flow-card.js
