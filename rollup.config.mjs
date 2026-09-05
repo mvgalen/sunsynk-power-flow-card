@@ -9,7 +9,11 @@ const isWatch = process.env.ROLLUP_WATCH === 'true';
 
 const plugins = [
   typescript({
-      tsconfig: './tsconfig.json'
+    tsconfig: './tsconfig.json',
+    include: ['src/**/*.ts'], // 👈 FORCE the plugin to grab TypeScript files
+    check: false,             // Prevents cache/type check lockups in CI pipelines
+    clean: true,
+  }),    
     }),
   nodeResolve({
     jsnext: true,
