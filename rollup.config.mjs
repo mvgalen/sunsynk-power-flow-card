@@ -19,7 +19,7 @@ const plugins = [
     exclude: 'node_modules/**',
     babelHelpers: 'bundled',
     compact: true,
-    extensions: ['.js', '.ts'],
+    extensions: ['.js', '.ts'],  
     presets: [
       [
         '@babel/env',
@@ -27,6 +27,7 @@ const plugins = [
           modules: false,
           targets: '> 2.5%, not dead',
         },
+     '@babel/preset-typescript'
       ],
     ],
     plugins: [
@@ -36,6 +37,7 @@ const plugins = [
           legacy: true,
         },
       ],
+      ["@babel/plugin-transform-class-properties"]
       ['@babel/plugin-proposal-class-properties'],
       ['@babel/plugin-transform-template-literals'],
     ],
