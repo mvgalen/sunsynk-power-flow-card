@@ -17,7 +17,8 @@
     "emitDecoratorMetadata": true,    
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
-    "isolatedModules": true
+    "isolatedModules": true,
+    "useDefineForClassFields": false,
   },
   "include": ["src/*", "src/**/*"]
 }
