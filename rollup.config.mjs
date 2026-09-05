@@ -21,7 +21,7 @@ const plugins = [
     exclude: 'node_modules/**',
     babelHelpers: 'bundled',
     compact: true,
-    extensions: ['.js', 'ts'],
+    extensions: ['.js', '.ts'],
     presets: [
       [
         '@babel/env',
