@@ -40,7 +40,7 @@ const plugins = [
           legacy: true,
         },
       ],
-      ["@babel/plugin-transform-class-properties"]
+      ["@babel/plugin-transform-class-properties"],
       ['@babel/plugin-proposal-class-properties'],
       ['@babel/plugin-transform-template-literals'],
     ],
