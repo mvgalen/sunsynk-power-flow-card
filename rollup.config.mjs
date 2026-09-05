@@ -46,6 +46,7 @@ const plugins = [
 
 export default {
   input: ['./src/index.ts'],
+  extensions: ['.js', '.ts'],
   output: {
     file: 'dist/sunsynk-power-flow-card.js',
     format: 'esm',
