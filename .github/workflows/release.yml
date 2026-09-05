@@ -35,7 +35,7 @@ jobs:
         run: echo "version=$(node -pe "require('./package.json').version")" >> $GITHUB_ENV
 
       - name: Install semver
-        run: npm install semver --force
+        run: npm install semver  --legacy-peer-deps
 
       - name: Remove package-lock.json to prevent conflicts
         run: |
